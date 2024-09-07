@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.row
+{
+    display:flex;    
+}
+.column
+{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.centrar
+{
+    display: flex;
+    justify-content: center;
+}
+
+hr
+{
+    color: rgb(15, 56, 56);
+    border: solid 2px;
+}
