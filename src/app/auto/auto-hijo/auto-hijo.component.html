@@ -4,8 +4,10 @@
         <h2 class="centrar">Lista de autos</h2>
         <hr>
         <ul>
-            <li>
-                lista
+            <li *ngFor="let item of autoLista">
+                <h3>Marca => {{item.marca}}</h3>
+                <h3>Modelo => {{item.modelo}}</h3>
+                <h3>Precio => {{item.precio}}</h3>
             </li>
         </ul>
     </div>
@@ -13,12 +15,12 @@
         <h2 class="centrar">Agregar auto</h2>
         <hr>
         <!-- agregar el formulario para llenar la lista de autos => Utilizando un boton tipo submit -->
-        <form>
-            <input type="text" name="Marca" required placeholder="Marca">
+        <form (submit)="agregarAuto()">
+            <input type="text" name="Marca" required placeholder="marca" [(ngModel)]="nuevoAuto.marca">
             <br>
-            <input type="text" name="Modelo" required placeholder="Modelo">
+            <input type="text" name="Modelo" required placeholder="modelo" [(ngModel)]="nuevoAuto.modelo">
             <br>
-            <input type="text" name="Precio" required placeholder="precio">
+            <input type="number" name="Precio" required placeholder="precio" [(ngModel)]="nuevoAuto.precio">
             <br>
             <button type="submit">Agregar</button>
         </form>

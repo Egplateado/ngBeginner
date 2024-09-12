@@ -8,5 +8,4 @@ import { IAuto } from '../interfaces/auto';
 })
 export class AutoPadreComponent {
 mostrarTitulo:string = 'HELO WORLD!';
-autoLista:IAuto[] = []
 }
